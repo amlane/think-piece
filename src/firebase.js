@@ -45,7 +45,7 @@ export const createUserProfileDocument = async (user, additionalData) => {
         ...additionalData
       });
     } catch (error) {
-      console.error("error:", error);
+      console.error("error fetching users:", error.message);
     }
   }
   return getUserDocument(user.uid);
